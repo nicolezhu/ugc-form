@@ -2,14 +2,23 @@
 <html>
 	<head>
 		<title>UGC Form</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="script.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/tabletop.js"></script>
 	</head>
 
 	<body>
-		<h1>Here is a form</h1>
+		<h1>Here are submissions</h1>
+		<div class="submissions container"><div class="row"></div></div>
+
 		<script type="text/javascript">var submitted=false;</script>
 		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {submitSuccess();}"></iframe>
+
+		<div class="container form-container">
+		<div class="row submit"></div><div class="row"><div class="col-md-6">
+		<h2>Here is a form</h2>
 		<form action="https://docs.google.com/a/sbnation.com/forms/d/1gLLcEIwk9tyOmazW5pG7sDYH901i_k0uDxVsUymIU3g/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 			<ol role="list" class="ss-question-list" style="padding-left: 0">
 			<div class="ss-form-question errorbox-good" role="listitem">
@@ -31,8 +40,21 @@
 							<div class="ss-q-title">Tell us a story.</div>
 							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 						</label>
-						<textarea name="entry.951274509" rows="8" cols="0" class="ss-q-long" id="entry_951274509" dir="auto" aria-label="Tell us a story.  "></textarea>
+						<br>
+						<textarea name="entry.951274509" rows="8" cols="0" class="ss-q-long" id="entry_951274509" dir="auto" aria-label="Tell us a story."></textarea>
 						<div class="error-message" id="896507092_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_1032922530">
+							<div class="ss-q-title">Image link</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.1032922530" value="" class="ss-q-short" id="entry_1032922530" dir="auto" aria-label="Image link  " title="">
+						<div class="error-message" id="484713105_errorMessage"></div>
 					</div>
 				</div>
 			</div>
@@ -52,6 +74,12 @@
 			</div>
 			</ol>
 		</form>
+		</div>
+		<div class="col-md-6 success">
+			</div>
+		</div>
+			
+		</div>
 	</body>
 </html>
 
