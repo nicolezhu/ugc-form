@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UGC Form</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<h1>Here is a form</h1>
+		<script type="text/javascript">var submitted=false;</script>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {submitSuccess();}"></iframe>
+		<form action="https://docs.google.com/a/sbnation.com/forms/d/1gLLcEIwk9tyOmazW5pG7sDYH901i_k0uDxVsUymIU3g/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+			<ol role="list" class="ss-question-list" style="padding-left: 0">
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_1229433111">
+							<div class="ss-q-title">Name</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.1229433111" value="" class="ss-q-short" id="entry_1229433111" dir="auto" aria-label="Name  " title="">
+						<div class="error-message" id="330361018_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-paragraph-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_951274509">
+							<div class="ss-q-title">Tell us a story.</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<textarea name="entry.951274509" rows="8" cols="0" class="ss-q-long" id="entry_951274509" dir="auto" aria-label="Tell us a story.  "></textarea>
+						<div class="error-message" id="896507092_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="draftResponse" value="[,,&quot;-4325423436550217846&quot;]">
+			<input type="hidden" name="pageHistory" value="0">
+			<input type="hidden" name="fbzx" value="-4325423436550217846">
+			<div class="ss-item ss-navigate">
+				<table id="navigation-table">
+					<tbody>
+						<tr>
+							<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+								<input type="submit" name="submit" value="Submit" id="ss-submit">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</ol>
+		</form>
+	</body>
+</html>
+
+<!--<form action="https://docs.google.com/a/sbnation.com/forms/d/1gLLcEIwk9tyOmazW5pG7sDYH901i_k0uDxVsUymIU3g/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+	entry.1229433111-->
