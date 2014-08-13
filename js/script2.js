@@ -1,14 +1,5 @@
-// show success message when form is submitted
 function submitSuccess() {
-	$('.success').show();
-}
-
-// clear form fields
-function resetForm() {
-	$('form').find('input:text, input:password, input:file, select, textarea').val('');
-    $('form').find('input:radio, input:checkbox')
-         .removeAttr('checked').removeAttr('selected');
-    $('.success').hide();
+	$('.success').append('<h3>You done it</h3>');
 }
 
 // initialize tabletop library
@@ -27,11 +18,11 @@ function readData(data, tabletop) {
 	printSubmissions();
 }
 
-// go through submissions, print only the ones verified for upload
 function printSubmissions() {
+	// go through submissions, print only the ones verified for upload
 	for (i=0; i < submissions.length; i++) {
 		if (submissions[i].upload == "yes") {
-			$(".submit").append( "<div class='element-item " + submissions[i].mood.toLowerCase() + "'><h3>" + submissions[i].name + "</h3><img src='" + submissions[i].imagelink + "' /><p>" + submissions[i].tellusastory + "</p></div>");
+			$(".container").append( "<div class='element-item " + submissions[i].mood + "'><h3>" + submissions[i].name + "</h3><img src='" + submissions[i].imagelink + "' /><p>" + submissions[i].tellusastory + "</p></div>");
 		} else {
 			console.log("not shown");
 		}
@@ -39,9 +30,8 @@ function printSubmissions() {
 	isotopeGrid();
 }
 
-// create isotope grid and filters
 function isotopeGrid() {
-	var $container = $('.submit').isotope({
+	var $container = $('.container').isotope({
 		itemSelector: '.element-item',
 		layoutMode: 'masonry'
 	});
@@ -62,5 +52,8 @@ function isotopeGrid() {
 
 $(document).ready(function(){
 	init();
-	$('#reset').on('click', resetForm);
+	// initialize Masonry after all images have loaded  
+	/* $container.imagesLoaded( function() {
+	  $container.masonry();
+	}); */
 });

@@ -3,8 +3,9 @@
 	<head>
 		<title>UGC Form</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/tabletop.js"></script>
 	</head>
@@ -16,9 +17,17 @@
 		<script type="text/javascript">var submitted=false;</script>
 		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {submitSuccess();}"></iframe>
 
+		<div id="filters" class="button-group">
+			<button class="button is-checked" data-filter="*">show all</button>
+			<button class="button" data-filter=".happy">happy</button>
+			<button class="button" data-filter=".sad">sad</button>
+			<button class="button" data-filter=".indifferent">indifferent</button>
+		</div>
+
 		<div class="container form-container">
-		<div class="row submit"></div><div class="row"><div class="col-md-6">
-		<h2>Here is a form</h2>
+		<div class="submit"></div>
+		<h2 id="form-title">Here is a form</h2>
+
 		<form action="https://docs.google.com/a/sbnation.com/forms/d/1gLLcEIwk9tyOmazW5pG7sDYH901i_k0uDxVsUymIU3g/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 			<ol role="list" class="ss-question-list" style="padding-left: 0">
 			<div class="ss-form-question errorbox-good" role="listitem">
@@ -30,6 +39,36 @@
 						</label>
 						<input type="text" name="entry.1229433111" value="" class="ss-q-short" id="entry_1229433111" dir="auto" aria-label="Name  " title="">
 						<div class="error-message" id="330361018_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-radio">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_472010465"><div class="ss-q-title">Mood</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<ul class="ss-choices" role="radiogroup" aria-label="Mood  ">
+							<li class="ss-choice-item">
+								<label>
+									<span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.740695887" value="Happy" id="group_740695887_1" role="radio" class="ss-q-radio" aria-label="Happy"></span>
+									<span class="ss-choice-label">Happy</span>
+								</label>
+							</li>
+							<li class="ss-choice-item">
+								<label>
+									<span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.740695887" value="Sad" id="group_740695887_2" role="radio" class="ss-q-radio" aria-label="Sad"></span>
+									<span class="ss-choice-label">Sad</span>
+								</label>
+							</li>
+							<li class="ss-choice-item">
+								<label>
+									<span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.740695887" value="Indifferent" id="group_740695887_3" role="radio" class="ss-q-radio" aria-label="Indifferent"></span>
+									<span class="ss-choice-label">Indifferent</span>
+								</label>
+							</li>
+						</ul>
+						<div class="error-message" id="472010465_errorMessage"></div>
 					</div>
 				</div>
 			</div>
@@ -66,7 +105,10 @@
 					<tbody>
 						<tr>
 							<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-								<input type="submit" name="submit" value="Submit" id="ss-submit">
+								<input type="submit" name="submit" value="Submit" class="form-buttons" id="ss-submit">
+							</td>
+							<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+								<input type="reset" name="reset" value="Reset" class="form-buttons" id="reset">
 							</td>
 						</tr>
 					</tbody>
@@ -74,11 +116,7 @@
 			</div>
 			</ol>
 		</form>
-		</div>
-		<div class="col-md-6 success">
-			</div>
-		</div>
-			
+		<div class="success" style="display:none;"><h3>Submission successful</h3><img src="http://lolsnaps.com/upload_pic/OrderedacakefromWalmartthatwassupposedtosayCongratulationsyoudidit-75525.jpg" id="submit-message" /></div>
 		</div>
 	</body>
 </html>

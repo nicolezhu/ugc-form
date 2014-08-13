@@ -1,0 +1,56 @@
+body {
+	font-family: 'Alright Sans', sans-serif !important;
+}
+
+#submissions {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+img {
+	width: 100%;
+}
+
+.button-group {
+	z-index: 1000;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: left;
+	padding-top: 1em;
+}
+
+form {
+	vertical-align: top;
+}
+
+textarea {
+	width: 80%;
+}
+
+.success {
+	color: #6d98a8;
+	padding-top: 1em;
+}
+
+#ss-submit {
+  font-size: 1em;
+  font-weight: 100;
+  color: #414141;
+  background-color: #ececec;
+  cursor: pointer; 
+  width: 120px;
+  margin: 1.1em 1em 0.4em 0;
+  border: 0;
+  padding: 12px 0px;
+  padding: 8px 10px;
+}
+
+#ss-submit:hover {
+	background-color: #6d98a8;
+	color: #fff;
+}

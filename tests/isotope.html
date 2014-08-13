@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Isotope Filtering</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../js/isotope.pkgd.min.js"></script>
+		<style>
+			.element-item {
+			  position: relative;
+			  float: left;
+			  width: 100px;
+			  height: 100px;
+			  margin: 5px;
+			  padding: 10px;
+			  background: #888;
+			  color: #262524;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Isotope - filtering</h1>
+		<div id="filters" class="button-group">
+			<button class="button is-checked" data-filter="*">show all</button>
+			<button class="button" data-filter=".happy">happy</button>
+		</div>
+
+		<div class="container">
+			<div class="element-item happy"><h3>Dogs</h3></div>
+			<div class="element-item sad"><h3>Cats</h3></div>
+			<div class="element-item happy"><h3>Sloths</h3></div>
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				var $container = $('.container').isotope({
+					itemSelector: '.element-item',
+					layoutMode: 'fitRows'
+				});
+
+				$("#filters").on('click', 'button', function() {
+					var filterValue = $(this).attr('data-filter');
+					$container.isotope({ filter: filterValue });
+				});
+
+				$('.button-group').each(function(i, buttonGroup) {
+					var $buttonGroup = $(buttonGroup);
+					$buttonGroup.on('click', 'button', function() {
+						$buttonGroup.find('.is-checked');
+						$(this).addClass('is-checked');
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
