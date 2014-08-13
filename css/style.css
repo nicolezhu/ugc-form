@@ -1,5 +1,6 @@
 body {
 	font-family: 'Alright Sans', sans-serif !important;
+	background-color: #f1f3f2;
 }
 
 .submissions {
@@ -17,8 +18,30 @@ body {
   width: 150px;
   margin: 5px;
   padding: 10px;
-  background: #f1f3f2;
+  background: #f8f9f9;
   color: #4c4e4d;
+}
+
+.button-group button {
+	font-size: 0.8em;
+	font-weight: 100;
+	color: #fff;
+	background-color: #4c4e4d;
+	cursor: pointer;
+	width: 120px;
+	margin: 1.1em 0em 0.4em 0;
+	border: 0;
+	padding: 8px 10px;
+}
+
+.button-group button:hover {
+	background-color: #a9acaa;
+	color: #4c4e4d;
+}
+
+.is-checked {
+	background-color: #fff200 !important;
+	color: #4c4e4d !important;
 }
 
 img {
@@ -48,7 +71,7 @@ textarea {
 
 .success {
 	color: #6d98a8;
-	background-color: #f1f3f2;
+	background-color: #f8f9f9;
 	float: right;
 	width: 20%;
 	padding: 0 2.5% 1.5% 1.5%;
@@ -70,8 +93,8 @@ textarea {
 .form-buttons {
   font-size: 1em;
   font-weight: 100;
-  color: #414141;
-  background-color: #ececec;
+  color: #fff;
+  background-color: #4c4e4d;
   cursor: pointer; 
   width: 120px;
   margin: 1.1em 1em 0.4em 0;
