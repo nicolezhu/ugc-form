@@ -16,13 +16,13 @@ function onSignInCallback(resp) {
 
 function signOut() {
 	console.log('signed out');
-	$('#form-title p').html('Signed out');
 	$('#gConnect').show();
 	gapi.auth.signOut();
 }
 
 function apiClientLoaded() {
 	//gapi.client.plus.people.get({userId: 'me'}).execute(handleEmailResponse);
+	$('#form-title p').remove();
 	 var request = gapi.client.plus.people.get({
 	   'userId': 'me'
 	 });
