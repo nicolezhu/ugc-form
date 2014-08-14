@@ -13,13 +13,13 @@ body {
 }
 
 .element-item {
-  position: relative;
-  float: left;
-  width: 150px;
-  margin: 5px;
-  padding: 10px;
-  background: #f8f9f9;
-  color: #4c4e4d;
+	position: relative;
+	float: left;
+	width: 180px;
+	margin: 5px;
+	padding: 10px;
+	background: #f8f9f9;
+	color: #4c4e4d;
 }
 
 .button-group button {
@@ -48,6 +48,10 @@ img {
 	width: 100%;
 }
 
+#gConnect {
+	padding-left: 2.5%;
+}
+
 h1 {
 	text-align: center;
 }
@@ -56,6 +60,23 @@ h2 {
 	text-align: left;
 	padding-top: 1em;
 	padding-left: 2.5%;
+}
+
+h2 p {
+	font-size: 0.6em;
+}
+
+#signout {
+	margin-left: 6em;
+	font-weight: 100;
+	color: #fff;
+  	background-color: #4c4e4d;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#logout {
+	padding-left: 1em;
 }
 
 form {

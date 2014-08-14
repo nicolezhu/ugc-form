@@ -1,3 +1,49 @@
+function onSignInCallback(resp) {
+	if (resp['status']['signed_in']) {
+		console.log(resp);
+    	document.getElementById('gConnect').setAttribute('style', 'display: none');
+  	} else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + resp['error']);
+  }
+	gapi.client.load('plus', 'v1', apiClientLoaded);
+	
+}
+
+function signOut() {
+	console.log('signed out');
+	$('#form-title p').html('Signed out');
+	$('#gConnect').show();
+	gapi.auth.signOut();
+}
+
+function apiClientLoaded() {
+	//gapi.client.plus.people.get({userId: 'me'}).execute(handleEmailResponse);
+	 var request = gapi.client.plus.people.get({
+	   'userId': 'me'
+	 });
+	 request.execute(handleEmailResponse);
+	 request.execute(function(resp) {
+	 	$('#form-title').append("<p>Signed in as: " + resp.emails[0].value + "<span id='signout' onclick='signOut()'>Sign Out</span></p>");
+	 	console.log(resp.emails[0].value);
+	   console.log('Retrieved profile for: ' + resp.displayName);
+	 });
+}
+
+function handleEmailResponse(resp) {
+	var primaryEmail;
+	for (var i=0; i < resp.emails.length; i++) {
+		if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
+	}
+	console.log('Primary email: ' + primaryEmail);
+	$('#entry_1494918024').val(primaryEmail).hide();
+	$('form').show();
+}
+
 // show success message when form is submitted
 function submitSuccess() {
 	$('.success').show();
@@ -62,6 +108,8 @@ function isotopeGrid() {
 }
 
 $(document).ready(function(){
+	$('form').hide();
 	init();
 	$('#reset').on('click', resetForm);
+	$('#signout').on('click', signOut);
 });
