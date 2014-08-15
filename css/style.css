@@ -75,6 +75,11 @@ h2 p {
 	cursor: pointer;
 }
 
+#signout:hover {
+	background-color: #6d98a8;
+	color: #fff;
+}
+
 #logout {
 	padding-left: 1em;
 }
@@ -90,7 +95,7 @@ textarea {
 	height: 200px;
 }
 
-.success {
+.message {
 	color: #6d98a8;
 	background-color: #f8f9f9;
 	float: right;

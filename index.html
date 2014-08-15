@@ -30,7 +30,7 @@
 			<button class="g-signin" data-scope="email" data-clientid="291550158741-tuc40qg6t50lmu470v9om5ks1d04ed1a.apps.googleusercontent.com" data-callback="onSignInCallback" data-theme="dark" data-cookiepolicy="single_host_origin">
 			</button>
 		</div>
-		<form action="https://docs.google.com/a/sbnation.com/forms/d/1gLLcEIwk9tyOmazW5pG7sDYH901i_k0uDxVsUymIU3g/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+		<form action="#" method="POST" target="hidden_iframe" onsubmit="return validateForm(event)">
 			<ol role="list" class="ss-question-list" style="padding-left: 0">
 			<div class="ss-form-question errorbox-good" role="listitem">
 				<div dir="ltr" class="ss-item  ss-text">
@@ -46,6 +46,30 @@
 			</div>	
 				<input type="text" name="entry.1494918024" value="" class="ss-q-short" id="entry_1494918024" dir="auto" aria-label="Email  " title="">
 				<div class="error-message" id="1910657003_errorMessage"></div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_659252300">
+							<div class="ss-q-title">Phone number</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.659252300" value="" class="ss-q-short" id="entry_659252300" dir="auto" aria-label="Phone number" title="">
+						<div class="error-message" id="1343208022_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_1232261407">
+							<div class="ss-q-title">Contact email</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.1232261407" value="" class="ss-q-short" id="entry_1232261407" dir="auto" aria-label="Contact email  " title="">
+						<div class="error-message" id="649160837_errorMessage"></div>
+					</div>
+				</div>
+			</div>
 			<div class="ss-form-question errorbox-good" role="listitem">
 				<div dir="ltr" class="ss-item  ss-radio">
 					<div class="ss-form-entry">
@@ -120,7 +144,8 @@
 			</div>
 			</ol>
 		</form>
-		<div class="success" style="display:none;"><h3>Submission successful</h3><img src="http://lolsnaps.com/upload_pic/OrderedacakefromWalmartthatwassupposedtosayCongratulationsyoudidit-75525.jpg" id="submit-message" /></div>
+		<div class="message" style="display:none;" id="success-message"><h3>Submission successful</h3><img src="http://lolsnaps.com/upload_pic/OrderedacakefromWalmartthatwassupposedtosayCongratulationsyoudidit-75525.jpg" id="submit-message" /></div>
+		<div class="message" style="display:none;" id="error-message"><h3>Please correct the following field(s) before submitting:</h3><ul></ul></div>
 		</div>
 
 		<!-- Place this asynchronous JavaScript just before your </body> tag -->

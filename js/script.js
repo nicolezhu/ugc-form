@@ -1,3 +1,4 @@
+// hide sign-in button if user is logged in
 function onSignInCallback(resp) {
 	if (resp['status']['signed_in']) {
 		console.log(resp);
@@ -14,12 +15,14 @@ function onSignInCallback(resp) {
 	
 }
 
+// sign user out
 function signOut() {
 	console.log('signed out');
 	$('#gConnect').show();
 	gapi.auth.signOut();
 }
 
+// loads form for logged-in users
 function apiClientLoaded() {
 	//gapi.client.plus.people.get({userId: 'me'}).execute(handleEmailResponse);
 	$('#form-title p').remove();
@@ -34,6 +37,7 @@ function apiClientLoaded() {
 	 });
 }
 
+// sets email field for current user
 function handleEmailResponse(resp) {
 	var primaryEmail;
 	for (var i=0; i < resp.emails.length; i++) {
@@ -42,19 +46,6 @@ function handleEmailResponse(resp) {
 	console.log('Primary email: ' + primaryEmail);
 	$('#entry_1494918024').val(primaryEmail).hide();
 	$('form').show();
-}
-
-// show success message when form is submitted
-function submitSuccess() {
-	$('.success').show();
-}
-
-// clear form fields
-function resetForm() {
-	$('form').find('input:text, input:password, input:file, select, textarea').val('');
-    $('form').find('input:radio, input:checkbox')
-         .removeAttr('checked').removeAttr('selected');
-    $('.success').hide();
 }
 
 // initialize tabletop library
@@ -107,6 +98,64 @@ function isotopeGrid() {
 	});
 }
 
+// show success message when form is submitted
+function submitSuccess() {
+	$('#success-message').show();
+}
+
+// clear form fields
+function resetForm() {
+	$('form').find('input:text, input:password, input:file, select, textarea').val('');
+    $('form').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
+    $('#success-message').hide();
+    $('#error-message').hide();
+}
+
+// form validation
+function validateForm(event) {
+	var phoneNumber = $('#entry_659252300').val();
+	var emailAddress = $('#entry_1232261407').val();
+	console.log(phoneNumber);
+	console.log(emailAddress);
+
+	// submits response if phone number and email are validated
+	// else shows an error message with form fields to be corrected
+	if (validatePhoneNumber(phoneNumber) && validateEmailAddress(emailAddress)) {
+		console.log('correct');
+		$('form').attr('action', 'https://docs.google.com/a/sbnation.com/forms/d/1gLLcEIwk9tyOmazW5pG7sDYH901i_k0uDxVsUymIU3g/formResponse');
+		submitted=true;
+		$('#error-message').hide();
+	} else {
+		$('#error-message ul').empty();
+		if (!(validatePhoneNumber(phoneNumber))) {
+			$('#error-message ul').append('<li>Invalid phone number</li>');
+		}
+		if (!(validateEmailAddress(emailAddress))) {
+			$('#error-message ul').append('<li>Invalid email address</li>');
+		}
+		$('#error-message').show();
+		event.preventDefault();
+		console.log("incorrect");
+	}
+}
+
+// validate phone number (US only)
+function validatePhoneNumber(number) {
+	number = number.replace(/\D/g, '');
+    isValid = (/^(?:(1\-?)|(\+1 ?))?\(?(\d{3})[\)\-\.]?(\d{3})[\-\.]?(\d{4})$/).test(number) && (number.length === 10);
+    console.log(isValid);
+    return isValid;
+}
+
+// validate email address
+function validateEmailAddress(email) {
+	var emailRegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	console.log(emailRegExp.test(email));
+    return emailRegExp.test(email);
+}
+
+
+// document ready
 $(document).ready(function(){
 	$('form').hide();
 	init();
