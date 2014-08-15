@@ -68,7 +68,7 @@ function readData(data, tabletop) {
 function printSubmissions() {
 	for (i=0; i < submissions.length; i++) {
 		if (submissions[i].upload == "yes") {
-			$(".submit").append( "<div class='element-item " + submissions[i].mood.toLowerCase() + "'><h3>" + submissions[i].name + "</h3><img src='" + submissions[i].imagelink + "' /><p>" + submissions[i].tellusastory + "</p></div>");
+			$(".submit").append( "<div class='element-item " + submissions[i].mood.toLowerCase() + "'><h3>" + submissions[i].name + "</h3><a href='" + submissions[i].imagelink + "' target='_blank'><img src='" + submissions[i].imagelink + "' /></a><p>" + submissions[i].tellusastory + "</p></div>");
 		} else {
 			console.log("not shown");
 		}
