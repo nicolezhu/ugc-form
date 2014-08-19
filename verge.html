@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/verge.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/verge.js"></script>
+		<script src="js/tabletop.js"></script>
+	</head>
+
+	<body>
+		<h1>Here are submissions</h1>
+		<div class="submissions container"><div class="row"></div></div>
+
+		<script type="text/javascript">var submitted=false;</script>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {submitSuccess();}"></iframe>
+
+		<div class="container form-container">
+		<div class="submit"></div>
+		<h2 id="form-title">Here is a form</h2>
+		<form action="#" method="POST" id="ss-form" target="hidden_iframe" onsubmit="return validateForm(event)">
+			<ol role="list" class="ss-question-list" style="padding-left: 0">		
+				<input type="text" name="entry.1749494286" value="" class="ss-q-short" id="entry_1749494286" dir="auto" aria-label="Verge User" title="">
+				<div class="error-message" id="552567521_errorMessage"></div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item ss-item-required ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_1201683887">
+							<div class="ss-q-title">Name<span class="ss-required-asterisk">*</span></div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.1201683887" value="" class="ss-q-short" id="entry_1201683887" dir="auto" aria-label="Name  " aria-required="true" required="" title="">
+						<div class="error-message" id="538992479_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_1736603796">
+							<div class="ss-q-title">Twitter Handle</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.1736603796" value="" class="ss-q-short" id="entry_1736603796" dir="auto" aria-label="Twitter Handle  " title="">
+						<div class="error-message" id="954697927_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-paragraph-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_167335345">
+							<div class="ss-q-title">Describe the contents of your bag</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr">(140 characters max)</div>
+						</label>
+						<textarea name="entry.167335345" rows="8" cols="0" class="ss-q-long" id="entry_167335345" dir="auto" aria-label="Description Text  "></textarea>
+						<div class="error-message" id="133154603_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="ltr" class="ss-item  ss-text">
+					<div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_396161777">
+							<div class="ss-q-title">Image URL<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label><span class="ss-required-asterisk">*</span></div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</label>
+						<input type="text" name="entry.396161777" value="" class="ss-q-short" id="entry_396161777" dir="auto" aria-label="Image URL  " aria-required="true" required="" title="">
+						<div class="error-message" id="574478025_errorMessage"></div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="draftResponse" value="[,,&quot;-81799870738196975&quot;]">
+			<input type="hidden" name="pageHistory" value="0">
+			<input type="hidden" name="fbzx" value="-81799870738196975">
+			<div class="ss-item ss-navigate">
+				<table id="navigation-table">
+					<tbody>
+						<tr>
+							<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+								<input type="submit" name="submit" value="Submit" class="form-buttons" id="ss-submit">
+							</td>
+							<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+								<input type="reset" name="reset" value="Reset" class="form-buttons" id="reset">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</ol>
+		</form>
+		<div class="message" style="display:none;" id="success-message"><h3>Submission successful</h3><img src="http://lolsnaps.com/upload_pic/OrderedacakefromWalmartthatwassupposedtosayCongratulationsyoudidit-75525.jpg" id="submit-message" /></div>
+		<div class="message" style="display:none;" id="error-message"><h3>Please correct the following field(s) before submitting:</h3><ul></ul></div>
+		</div>
+	</body>
+</html>

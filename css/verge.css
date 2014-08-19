@@ -1,0 +1,135 @@
+body {
+	font-family: 'Alright Sans', sans-serif !important;
+	background-color: #f1f3f2;
+}
+
+.submissions {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.container {
+	width: 100%;
+}
+
+.element-item {
+	position: relative;
+	float: left;
+	width: 200px;
+	margin: 5px;
+	padding: 10px;
+	background: #f8f9f9;
+	color: #4c4e4d;
+}
+
+.button-group button {
+	font-size: 0.8em;
+	font-weight: 100;
+	color: #fff;
+	background-color: #4c4e4d;
+	cursor: pointer;
+	width: 120px;
+	margin: 1.1em 0em 0.4em 0;
+	border: 0;
+	padding: 8px 10px;
+}
+
+.button-group button:hover {
+	background-color: #a9acaa;
+	color: #4c4e4d;
+}
+
+.is-checked {
+	background-color: #fff200 !important;
+	color: #4c4e4d !important;
+}
+
+img {
+	width: 100%;
+}
+
+#gConnect {
+	padding-left: 2.5%;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: left;
+	padding-top: 1em;
+	padding-left: 2.5%;
+}
+
+h2 p {
+	font-size: 0.6em;
+}
+
+#signout {
+	margin-left: 6em;
+	font-weight: 100;
+	color: #fff;
+  	background-color: #4c4e4d;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#signout:hover {
+	background-color: #6d98a8;
+	color: #fff;
+}
+
+#logout {
+	padding-left: 1em;
+}
+
+form {
+	float: left;
+	width: 45%;
+		padding: 0 2.5% 0 2.5%;
+}
+
+textarea {
+	width: 100%;
+	height: 200px;
+}
+
+.message {
+	color: #6d98a8;
+	background-color: #f8f9f9;
+	float: right;
+	width: 20%;
+	padding: 0 2.5% 1.5% 1.5%;
+	margin: 7% 13%;
+}
+
+#submit-message {
+	width: 100%;
+}
+
+.ss-form-entry {
+	margin-top: 1em;
+}
+
+.ss-choice-item {
+	list-style-type: none;
+}
+
+.form-buttons {
+  font-size: 1em;
+  font-weight: 100;
+  color: #fff;
+  background-color: #4c4e4d;
+  cursor: pointer; 
+  width: 120px;
+  margin: 1.1em 1em 0.4em 0;
+  border: 0;
+  padding: 12px 0px;
+  padding: 8px 10px;
+}
+
+.form-buttons:hover {
+	background-color: #6d98a8;
+	color: #fff;
+}
