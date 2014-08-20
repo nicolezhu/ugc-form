@@ -97,14 +97,17 @@ function resetForm() {
 
 // document ready
 $(document).ready(function(){
-	/* jQuery.get('/account/auth_status', function(data){
+	jQuery.get('/account/auth_status', function(data){
+		var vergeUser;
 		if (data.logged_in){
-			console.log('logged in as: ', data.username);
+			vergeUser = data.username;
+			console.log('logged in as: ', vergeUser);
+			$('#entry_1749494286').val(vergeUser).hide();
 			$('form').show();
 		} else {
 			console.log('not logged in');
 		}
-	}); */
+	});
 	init();
 
 	$('#reset').on('click', resetForm);

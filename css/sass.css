@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Adelle", serif;
+  font-weight: 500;
+  font-size: 5em;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+h2 {
+	padding-top: 1em;
+	padding-left: 2.5%;
+}
+
+#title-subhead {
+  text-align: center;
+  font-weight: 700;
+}
+
+.intro-text {
+  max-width: 55%;
+  margin: 0 auto;
+  margin-top: 4%;
+  font-weight: 100;
+  text-align: center;
+  p {
+    margin-top: 4%;
+  }
+}
+
+hr {
+  border: 1px solid #c1c1c1;
+  max-width: 70%;
+  margin-top: 5%;
+}
+
+.subhead {
+  text-align: center;
+  font-family: ff-din-web-condensed,helvetica,sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+}
+
+.ss-required-asterisk {
+  color: #fb4834;
+}
+
+.required {
+  color: #fb4834;
+  text-align: center;
+  margin-top: -4%
+}
+
+.submissions {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  hr {
+    max-width: 100%;
+  }
+}
+
+.element-item {
+	position: relative;
+	float: left;
+	width: 200px;
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid #dadada;
+  h3 {
+    font-weight: 700;
+  }
+  p {
+    line-height: 1.3;
+  }
+  a {
+    font-size: 0.8em;
+  }
+}
+
+.button-group button {
+	font-size: 0.8em;
+	font-weight: 100;
+	color: #fff;
+	background-color: #4c4e4d;
+	cursor: pointer;
+	width: 120px;
+	margin: 1.1em 0em 0.4em 0;
+	border: 0;
+	padding: 8px 10px;
+}
+
+img {
+	width: 100%;
+}
+
+form {
+  float: left;
+  width: 70%;
+  padding: 0 2.5% 0 2.5%;
+}
+
+input {
+  border:1px solid #dadada;
+  width: 30%;
+  height: 30px;
+  font-size: 1em;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border:1px solid #dadada;
+  font-size: 1em;
+}
+
+.message {
+	color: #6d98a8;
+	background-color: #f8f9f9;
+	float: right;
+	width: 20%;
+	padding: 0 2.5% 1.5% 1.5%;
+	margin: 7% 13%;
+}
+
+#submit-message {
+	width: 100%;
+}
+
+.ss-form-entry {
+	margin-top: 1em;
+}
+
+.ss-choice-item {
+	list-style-type: none;
+}
+
+.ss-q-title {
+  font-weight: 700;
+}
+
+.ss-secondary-text {
+  font-size: 0.8em;
+}
+
+.form-buttons {
+  font-family: ff-din-web-condensed,helvetica,sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 100;
+  color: #fff;
+  background-color: #4c4e4d;
+  cursor: pointer; 
+  width: 120px;
+  margin: 2em 1em 5em 0;
+  border: 0;
+  padding: 4px 10px;
+}
+
+.form-buttons:hover {
+	background-color: #fb4834;
+	color: #fff;
+}
+
+// media queries
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+}
