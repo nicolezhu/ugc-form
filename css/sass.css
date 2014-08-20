@@ -152,6 +152,14 @@ textarea {
   font-size: 0.8em;
 }
 
+#success-message {
+  margin: 0 auto;
+  text-align: center;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
 .form-buttons {
   font-family: ff-din-web-condensed,helvetica,sans-serif;
   text-transform: uppercase;

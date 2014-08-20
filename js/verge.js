@@ -66,7 +66,6 @@ function validateForm(event) {
 		submitted=true;
 		$('#error-message').hide();
 	} else {
-		$('#success-message').hide();
 		$('#error-message ul').empty().append('<li>Please limit your description to 140 characters or less.</li>');
 		$('#error-message').show();
 		event.preventDefault();
@@ -82,15 +81,20 @@ function nonEmpty(name, imageSource) {
 
 // show success message when form is submitted
 function submitSuccess() {
-	console.log('show');
-	$('#success-message').show();
+	$('.form-container').hide();
+	$('body').append('<div id="success-message"><h2 class="subhead">Thanks for your submission!</h2><br><button class="form-buttons" id="submit-again" onclick="submitMore()" >Submit another</button></div>');
+}
+
+function submitMore() {
+	$('#success-message').hide();
+	resetForm();
+	$('.form-container').show();
 }
 
 // clear form fields
 function resetForm() {
 	$('form').find('input:text, input:password, input:file, select, textarea').val('');
     $('form').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
-    $('#success-message').hide();
     $('#error-message').hide();
 }
 
