@@ -72,9 +72,9 @@ hr {
 .element-item {
   position: relative;
   float: left;
-  width: 200px;
-  margin: 5px;
-  padding: 10px;
+  width: 31.3%;
+  margin: 1%;
+  padding: 2%;
   border: 1px solid #dadada;
   h3 {
     font-weight: 700;
@@ -124,12 +124,10 @@ textarea {
 }
 
 .message {
-  color: #6d98a8;
-  background-color: #f8f9f9;
-  float: right;
-  width: 20%;
-  padding: 0 2.5% 1.5% 1.5%;
-  margin: 7% 13%;
+  color: #fb4834;
+  margin-top: -10%;
+  font-size: 0.8em;
+  margin-bottom: 5%;
 }
 
 #submit-message {
@@ -183,6 +181,7 @@ textarea {
 @media only screen and (max-width: 767px) {
   h1 {
     font-size: 2em;
+    margin-top: 10%;
   }
   input {
     width: 100%;

@@ -1,7 +1,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/verge.js"></script>
-<script src="js/tabletop.js"></script>
+<script src="http://cdn0.vox-cdn.com/uploads/chorus_asset/file/663690/isotope.pkgd.min.0.js"></script>
+<script src="http://cdn1.vox-cdn.com/uploads/chorus_asset/file/664814/verge.0.js"></script>
+<!--<script src="http://cdn2.vox-cdn.com/uploads/chorus_asset/file/664072/verge.0.js"></script>-->
+<script src="http://cdn2.vox-cdn.com/uploads/chorus_asset/file/663696/tabletop.0.js"></script>
 
 <h1>What's in your bag, <br />Verge Readers?</h1>
 <h2 id="title-subhead">We want to see your stuff.</h2>
@@ -11,13 +12,9 @@
 	<p>Let's find out.</p>
 </div>
 <hr />
-<h2 class="subhead">Submissions</h2>
+<h2 class="subhead" id="submissions-header">Submissions</h2>
 
 <div class="submissions container"></div>
-
-<script type="text/javascript"><!--
-var submitted=false;
-// --></script>
 
 <iframe onload="if(submitted) {submitSuccess();}" style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
 <div class="container">
@@ -91,12 +88,14 @@ var submitted=false;
 							<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 								<input type="reset" name="reset" value="Reset" class="form-buttons" id="reset">
 							</td>
-						</tr>
+							</tr>
 					</tbody>
 				</table>
 			</div>
+			<div class="message" style="display:none;" id="error-message"><h3>Please limit your description to 140 characters or less.</h3></div>
 			</ol>
 		</form>
-	<div class="message" style="display:none;" id="error-message"><h3>Please correct the following field(s) before submitting:</h3><ul></ul></div>
+		
 	</div>
+</div>
 </div>

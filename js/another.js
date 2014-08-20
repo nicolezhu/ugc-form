@@ -43,8 +43,7 @@ function printSubmissions() {
 function isotopeGrid() {
 	var $container = $('.submit').isotope({
 		itemSelector: '.element-item',
-		layoutMode: 'masonry',
-		resizable: true
+		layoutMode: 'masonry'
 	});
 }
 
@@ -101,7 +100,32 @@ function resetForm() {
 // document ready
 $(document).ready(function(){
 	var submitted = false;
+	var $container = $('.container');
 
+    var gutter = 30;
+    var min_width = 300;
+    $container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector : '.element-item',
+            gutterWidth: gutter,
+            isAnimated: true,
+              columnWidth: function( containerWidth ) {
+                var box_width = (((containerWidth - 2*gutter)/3) | 0) ;
+
+                if (box_width < min_width) {
+                    box_width = (((containerWidth - gutter)/2) | 0);
+                }
+
+                if (box_width < min_width) {
+                    box_width = containerWidth;
+                }
+
+                $('.element-item').width(box_width);
+
+                return box_width;
+              }
+        });
+    });
 	jQuery.get('/account/auth_status', function(data){
 		var vergeUser;
 		if (data.logged_in){
