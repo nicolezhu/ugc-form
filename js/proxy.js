@@ -12,21 +12,17 @@ function init() {
 var submissions;
 function readData(data, tabletop) { 
 	submissions = data;
-	console.log('made it here');
-	console.log(submissions);
 	printSubmissions();
 }
 
 // go through submissions, print only the ones verified for upload
 function printSubmissions() {
 	for (i=0; i < submissions.length; i++) {
-		if (submissions[i].upload == "yes") {
+		if (submissions[i].upload == "") {
 			// if user only submits name and image
 			if (submissions[i].twitterhandle == '' && submissions[i].describethecontentsofyourbag == '') {
-
 				$(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a></div>");
 			}
-
 			// if user submits name, twitter, and image
 			else if (submissions[i].describethecontentsofyourbag == '') {
 				$(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><p class='twitter-handle'><a href='http://twitter.com/" + submissions[i].twitterhandle + "'>@" + submissions[i].twitterhandle + "</p><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a></div>");
@@ -40,11 +36,11 @@ function printSubmissions() {
 			}
 		}
 	}
-	isotopeGrid();
 }
 
 // create isotope grid and filters
 function isotopeGrid() {
+//printSubmissions();
 	var $container = $('.submit').isotope({
 		itemSelector: '.element-item',
 		layoutMode: 'masonry',
@@ -81,7 +77,7 @@ function nonEmpty(name, imageSource) {
 // show success message when form is submitted
 function submitSuccess() {
 	$('.form-container').hide();
-	$('body').append('<div id="success-message"><h2 class="subhead">Thanks for your submission!</h2><br><button class="form-buttons" id="submit-again" onclick="submitMore()">Submit another</button><button class="form-buttons" id="scrollto-submissions" onclick="scrollToSubmissions()">See submissions</button></div>');
+	$('#form-divider').after('<div id="success-message"><h2 class="subhead">Thanks for your submission!</h2><br><button class="form-buttons" id="submit-again" onclick="submitMore()">Submit another</button><button class="form-buttons" id="scrollto-submissions" onclick="scrollToSubmissions()">See submissions</button></div>');
 }
 
 function submitMore() {
@@ -101,11 +97,13 @@ function resetForm() {
     $('#error-message').hide();
 }
 
+window.onload = function() {
+	isotopeGrid();
+};
 
 // document ready
 $(document).ready(function(){
 	var submitted = false;
-
 	jQuery.get('/account/auth_status', function(data){
 		var vergeUser;
 		if (data.logged_in){
