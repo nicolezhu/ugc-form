@@ -195,7 +195,12 @@ textarea {
   form {
     width: 100%;
   }
+  .container {
+    width: 90%;
+  }
   .element-item {
-    width: 100%;
+    width: 95%;
+    margin: 2.5%;
+    padding: 4%;
   }
 }
