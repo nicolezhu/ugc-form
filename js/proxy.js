@@ -3,6 +3,8 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1IJCnSm0NoJ
 function init() {
 		Tabletop.init( { key: public_spreadsheet_url,
                    callback: readData,
+                   proxy: 'https://apps.voxmedia.com.s3.amazonaws.com',
+                   debug: true,
                    simpleSheet: true } )
 	}
 
@@ -18,7 +20,7 @@ function readData(data, tabletop) {
 // go through submissions, print only the ones verified for upload
 function printSubmissions() {
 	for (i=0; i < submissions.length; i++) {
-		if (submissions[i].upload == "") {
+		if (submissions[i].upload == "yes") {
 			// if user only submits name and image
 			if (submissions[i].twitterhandle == '' && submissions[i].describethecontentsofyourbag == '') {
 

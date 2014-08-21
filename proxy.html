@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>What's in your bag?</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/verge.js"></script>
+		<script src="js/tabletop.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/sass.css" />
+	</head>
+	<body>
+		<h1>What's in your bag, <br />Verge Readers?</h1>
+		<h2 id="title-subhead">We want to see your stuff.</h2>
+		<div class="intro-text">
+			<p>You've seen <a href="http://www.theverge.com/label/whats-in-your-bag">what's in our bags</a>. Now we want to see what's in yours.</p>
+			<p>As a Hack week special, we're opening up What's In Your Bag to everyone. Just lay out your essential gear, take a picture and upload it to the tool below. We want to see it all: the phone, the notebook, and whatever else you like to keep around. Thanks to our photo tool, you'll see it pop up alongside dozens of other bags, combining into a glorious tapestry of stuff. What's in your bag, really? What's in everyone's bag? What's in the world's bag?</p>
+			<p>Let's find out.</p>
+		</div>
+		<hr />
+		<h2 class="subhead" id="submissions-header">Submissions</h2>
+
+		<div class="submissions container"></div>
+
+		<iframe onload="if(submitted) {submitSuccess();}" style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
+		<div class="container">
+			<div class="submit"></div>
+			<hr />
+			<div class="form-container">
+			<h2 class="subhead">What's in your bag?<br /></h2>
+			<p class="required">*required</p>
+				<form action="#" method="POST" id="ss-form" target="hidden_iframe" onsubmit="return validateForm(event)">
+					<ol role="list" class="ss-question-list" style="padding-left: 0">		
+						<input type="text" name="entry.1749494286" value="" class="ss-q-short" id="entry_1749494286" dir="auto" aria-label="Verge User" title="">
+						<div class="error-message" id="552567521_errorMessage"></div>
+					<div class="ss-form-question errorbox-good" role="listitem">
+						<div dir="ltr" class="ss-item ss-item-required ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-item-label" for="entry_1201683887">
+									<div class="ss-q-title">Name<span class="ss-required-asterisk">*</span></div>
+									<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+								</label>
+								<input type="text" name="entry.1201683887" value="" class="ss-q-short" id="entry_1201683887" dir="auto" aria-label="Name  " aria-required="true" required="" title="">
+								<div class="error-message" id="538992479_errorMessage"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ss-form-question errorbox-good" role="listitem">
+						<div dir="ltr" class="ss-item  ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-item-label" for="entry_1736603796">
+									<div class="ss-q-title">Twitter Handle</div>
+									<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+								</label>
+								<input type="text" name="entry.1736603796" value="" class="ss-q-short" id="entry_1736603796" dir="auto" aria-label="Twitter Handle  " title="">
+								<div class="error-message" id="954697927_errorMessage"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ss-form-question errorbox-good" role="listitem">
+						<div dir="ltr" class="ss-item  ss-paragraph-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-item-label" for="entry_167335345">
+									<div class="ss-q-title">Describe the contents of your bag</div>
+									<div class="ss-q-help ss-secondary-text" dir="ltr">(140 characters max)</div>
+								</label>
+								<textarea name="entry.167335345" rows="8" cols="0" class="ss-q-long" id="entry_167335345" dir="auto" aria-label="Description Text  "></textarea>
+								<div class="error-message" id="133154603_errorMessage"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ss-form-question errorbox-good" role="listitem">
+						<div dir="ltr" class="ss-item  ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-item-label" for="entry_396161777">
+									<div class="ss-q-title">Image URL<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label><span class="ss-required-asterisk">*</span></div>
+									<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+								</label>
+								<input type="text" name="entry.396161777" value="" class="ss-q-short" id="entry_396161777" dir="auto" aria-label="Image URL  " aria-required="true" required="" title="">
+								<div class="error-message" id="574478025_errorMessage"></div>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" name="draftResponse" value="[,,&quot;-81799870738196975&quot;]">
+					<input type="hidden" name="pageHistory" value="0">
+					<input type="hidden" name="fbzx" value="-81799870738196975">
+					<div class="ss-item ss-navigate">
+						<table id="navigation-table">
+							<tbody>
+								<tr>
+									<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+										<input type="submit" name="submit" value="Submit" class="form-buttons" id="ss-submit">
+									</td>
+									<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+										<input type="reset" name="reset" value="Reset" class="form-buttons" id="reset">
+									</td>
+									</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="message" style="display:none;" id="error-message"><h3>Please limit your description to 140 characters or less.</h3></div>
+					</ol>
+				</form>
+				
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
