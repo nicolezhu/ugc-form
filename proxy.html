@@ -16,15 +16,14 @@
 			<p>As a Hack week special, we're opening up What's In Your Bag to everyone. Just lay out your essential gear, take a picture and upload it to the tool below. We want to see it all: the phone, the notebook, and whatever else you like to keep around. Thanks to our photo tool, you'll see it pop up alongside dozens of other bags, combining into a glorious tapestry of stuff. What's in your bag, really? What's in everyone's bag? What's in the world's bag?</p>
 			<p>Let's find out.</p>
 		</div>
-		<hr id="form-divider" />
 		<h2 class="subhead" id="submissions-header">Submissions</h2>
 
-		<div class="submissions container"></div>
+		<div class="submissions"></div>
 
 		<iframe onload="if(submitted) {submitSuccess();}" style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
 		<div class="container">
 			<div class="submit"></div>
-			<hr />
+			<div id="form-divider"></div>
 			<div class="form-container">
 			<h2 class="subhead">What's in your bag?<br /></h2>
 			<p class="required">*required</p>
@@ -97,7 +96,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="message" style="display:none;" id="error-message"><h3>Please limit your description to 140 characters or less.</h3></div>
+					<div class="message" style="display:none;" id="error-message"><h3>Please correct the following field(s) before submitting:</h3><ul></ul></div>
 					</ol>
 				</form>
 				

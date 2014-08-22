@@ -2,6 +2,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
+#comments {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
 h1 {
   font-family: "Adelle", serif;
   font-weight: 500;
@@ -22,20 +27,21 @@ h2 {
 }
 
 .intro-text {
-  max-width: 55%;
+  max-width: 70%;
   margin: 0 auto;
   margin-top: 4%;
   font-weight: 100;
   text-align: center;
+  border-bottom: 2px solid #c1c1c1;
   p {
-    margin-top: 4%;
+    max-width: 75%;
+    padding-top: 3%;
+    margin: 0 auto;
   }
 }
 
-hr {
-  border: 1px solid #c1c1c1;
-  max-width: 70%;
-  margin-top: 5%;
+.hr-break {
+  padding-bottom: 5%;
 }
 
 .subhead {
@@ -64,9 +70,16 @@ hr {
 .container {
   width: 70%;
   margin: 0 auto;
-  hr {
-    max-width: 100%;
-  }
+  border-bottom: 2px solid #c1c1c1;
+  margin-bottom: 5%;
+}
+
+.submit {
+  margin-bottom: 5%;
+}
+
+.form-container {
+  border-top: 2px solid #c1c1c1;
 }
 
 .element-item {
@@ -99,7 +112,7 @@ hr {
   padding: 8px 10px;
 }
 
-img {
+.submit img {
   width: 100%;
 }
 
