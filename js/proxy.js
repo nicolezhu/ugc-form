@@ -72,7 +72,7 @@ function validateForm(event) {
 			jQuery('#error-message ul').append('<li>Please limit your description to 140 characters.</li>');
 		}
 		if (!(validURL(imageSource))) {
-			jQuery('#error-message ul').append('<li>Invalid image url.</li>');
+			jQuery('#error-message ul').append('<li>Invalid image URL.</li>');
 		}
 		if (!(noScript(name, twitter, imageSource, description))) {
 			jQuery('#error-message ul').append('<li>Your submission includes invalid characters.</li>');
@@ -150,6 +150,11 @@ jQuery(document).ready(function(){
 		}
 	});
 	init();
+
+	jQuery('textarea').keyup(function() {
+    	var chars = jQuery(this).val().length;
+    	jQuery('#characters').text((140 - chars) + " characters remaining");
+	});
 
 	jQuery('#reset').on('click', resetForm);
 });
