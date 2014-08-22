@@ -202,7 +202,8 @@ textarea {
 
 // media queries
 @media only screen and (max-width: 767px) {
-  h1 {
+  .entry-content {
+    h1 {
     font-size: 2em;
     margin-top: 10%;
   }
@@ -225,5 +226,6 @@ textarea {
     width: 95%;
     margin: 2.5%;
     padding: 4%;
+  }
   }
 }
