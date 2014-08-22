@@ -8,20 +8,6 @@ body {
   padding-top: 1%;
 }
 
-h1 {
-  font-family: "Adelle", serif;
-  font-weight: 500;
-  font-size: 5em;
-  line-height: 1.2;
-  letter-spacing: 1px;
-  margin-top: 5%;
-  text-align: center;
-}
-
-h2 {
-  padding-top: 2em;
-}
-
 #title-subhead {
   text-align: center;
   font-weight: 700;
@@ -47,9 +33,22 @@ h2 {
 
 .entry-content {
   border-bottom: 1px solid #c1c1c1;
-}
+  
+  h1 {
+  font-family: "Adelle", serif;
+  font-weight: 500;
+  font-size: 5em;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-top: 5%;
+  text-align: center;
+  }
 
-.subhead {
+  h2 {
+  padding-top: 2em;
+  }
+  
+  .subhead {
   text-align: center;
   font-family: ff-din-web-condensed,helvetica,sans-serif;
   font-size: 2em;
@@ -198,6 +197,7 @@ textarea {
 .form-buttons:hover {
   background-color: #fb4834;
   color: #fff;
+}
 }
 
 // media queries

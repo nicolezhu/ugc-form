@@ -138,17 +138,7 @@ window.onload = function() {
 // document ready
 jQuery(document).ready(function(){
 	var submitted = false;
-	jQuery.get('/account/auth_status', function(data){
-		var vergeUser;
-		if (data.logged_in){
-			vergeUser = data.username;
-			console.log('logged in as: ', vergeUser);
-			jQuery('#entry_1749494286').val(vergeUser).hide();
-			jQuery('form').show();
-		} else {
-			console.log('not logged in');
-		}
-	});
+	
 	init();
 
 	jQuery('textarea').keyup(function() {
