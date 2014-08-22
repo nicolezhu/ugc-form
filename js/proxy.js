@@ -25,14 +25,14 @@ function printSubmissions() {
 			}
 			// if user submits name, twitter, and image
 			else if (submissions[i].describethecontentsofyourbag == '') {
-				jQuery(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><p class='twitter-handle'><a href='http://twitter.com/" + submissions[i].twitterhandle + "'>@" + submissions[i].twitterhandle + "</p><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a></div>");
+				jQuery(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><p class='twitter-handle'><a href='http://twitter.com/" + submissions[i].twitterhandle + "'>@" + submissions[i].twitterhandle.replace(/@/, '') + "</p><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a></div>");
 			}
 			// if user submits name, description, and image
 			else if (submissions[i].twitterhandle == '') {
 				jQuery(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a><p>" + submissions[i].describethecontentsofyourbag + "</p></div>");
 			} else {
 			// if user submits all fields
-			jQuery(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><p class='twitter-handle'><a href='http://twitter.com/" + submissions[i].twitterhandle + "'>@" + submissions[i].twitterhandle + "</p><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a><p>" + submissions[i].describethecontentsofyourbag + "</p></div>");
+			jQuery(".submit").append( "<div class='element-item'><h3>" + submissions[i].name + "</h3><p class='twitter-handle'><a href='http://twitter.com/" + submissions[i].twitterhandle + "'>@" + submissions[i].twitterhandle.replace(/@/, '') + "</p><a href='" + submissions[i].imageurl + "' target='_blank'><img src='" + submissions[i].imageurl + "' /></a><p>" + submissions[i].describethecontentsofyourbag + "</p></div>");
 			}
 		}
 	}
@@ -61,7 +61,9 @@ function validateForm(event) {
 	// submits response if name and image source are validated
 	// else shows an error message with form fields to be corrected
 	if (nonEmpty(name, imageSource) && description.length <= 140 && validURL(imageSource) && noScript(name, twitter, imageSource, description)) {
+		console.log(twitter);
 		jQuery('form').attr('action', 'https://docs.google.com/a/sbnation.com/forms/d/1mk5e8uEQCEWtJg1-WjZJ4hGxoEZXwt3GhRawzrYDNkM/formResponse');
+
 		submitted=true;
 		jQuery('#error-message').hide();
 	} else {
