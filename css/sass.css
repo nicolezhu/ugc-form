@@ -5,6 +5,7 @@ body {
 #comments {
   max-width: 850px;
   margin: 0 auto;
+  padding-top: 1%;
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
 }
 
 h2 {
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
 #title-subhead {
@@ -42,6 +43,10 @@ h2 {
 
 .hr-break {
   padding-bottom: 5%;
+}
+
+.entry-content {
+  border-bottom: 1px solid #c1c1c1;
 }
 
 .subhead {
@@ -74,8 +79,7 @@ h2 {
 .container {
   width: 70%;
   margin: 0 auto;
-  border-bottom: 2px solid #c1c1c1;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .submit {

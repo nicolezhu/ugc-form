@@ -20,14 +20,14 @@
 
 		<div class="submissions"></div>
 
-		<iframe onload="if(submitted) {submitSuccess();}" style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
+		<iframe onload="if(typeof submitted !== 'undefined' && submitted) {submitSuccess();}" style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
 		<div class="container">
 			<div class="submit"></div>
 			<div id="form-divider"></div>
 			<div class="form-container">
 			<h2 class="subhead">What's in your bag?<br /></h2>
 			<p class="required">*required</p>
-				<form action="#" method="POST" id="ss-form" target="hidden_iframe" onsubmit="return validateForm(event)">
+				<form class="wiyb-form" action="#" method="POST" id="ss-form" target="hidden_iframe" onsubmit="return validateForm(event)">
 					<ol role="list" class="ss-question-list" style="padding-left: 0">		
 						<input type="text" name="entry.1749494286" value="" class="ss-q-short" id="entry_1749494286" dir="auto" aria-label="Verge User" title="">
 						<div class="error-message" id="552567521_errorMessage"></div>

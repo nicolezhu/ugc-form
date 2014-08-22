@@ -111,7 +111,7 @@ function nonEmpty(name, imageSource) {
 // show success message when form is submitted
 function submitSuccess() {
 	jQuery('.form-container').hide();
-	jQuery('#form-divider').after('<div id="success-message"><h2 class="subhead">Thanks for your submission!</h2><br><button class="form-buttons" id="submit-again" onclick="submitMore()">Submit another</button><button class="form-buttons" id="scrollto-submissions" onclick="scrollToSubmissions()">See submissions</button></div>');
+	jQuery('#form-divider').after('<div id="success-message"><h2 class="subhead">Thanks for your submission!</h2><p>Submissions will be reviewed. Check back soon!</p><br><button class="form-buttons" id="submit-again" onclick="submitMore()">Submit another</button><button class="form-buttons" id="scrollto-submissions" onclick="scrollToSubmissions()">See submissions</button></div>');
 }
 
 function submitMore() {
